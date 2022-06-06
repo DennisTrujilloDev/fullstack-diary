@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Holidays</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="saveMovies.css">
+  <script src="https://kit.fontawesome.com/5cfd8c0f6b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-sm-6 col-sm-offset-3">
+
+      <div class="col-sm-6" id="editNoteDiv">
+
+        <h2>What's Your Favorite Holiday?</h2>
+
+
+        <% if (user.local.email) { %>
+
+        <form action="getHolidayList" 
+          method="POST"
+        class="formNote">
+          <label for="inputData">State:</label><br>
+          <input type="text" id="todayDate" name="inputData"><br>
+          <button id="SubmitButton" type="submit"></button>
+
+        </form>
+        
+      </div>
+      <% } %>
+
+      <i class="fa-solid fa-trash-can"></i>
+
+        <p><strong><%= messages[8].name %></strong><br>
+          <%= messages[8].date.iso %><br>
+        <%= messages[8].description %><br>
+        <i class="fa-solid fa-heart" data-holidayName="<%= messages[8].name %>"></i><br>
+      </p>
+
+      <p><strong><%= messages[12].name %></strong><br>
+        <%= messages[12].date.iso %><br>
+        <%= messages[12].description %><br>
+        <i class="fa-solid fa-heart" data-holidayName="<%= messages[12].name %>"></i><br>
+      </p>
+      <p><strong><%= messages[53].name %></strong><br>
+        <%= messages[53].date.iso %><br>
+        <%= messages[53].description %><br>
+        <i class="fa-solid fa-heart" data-holidayName="<%= messages[53].name %>"></i><br>
+      </p> 
+
+
+    </div>
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

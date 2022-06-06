@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>Diary</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Righteous|Sen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="profile.css">
+      <script src="https://kit.fontawesome.com/077191d827.js" crossorigin="anonymous"></script>
+</head>
+  <body>
+    <header class="titleHere">
+      <section class="pic">
+        <!-- <a href="/profile"><h1>Diary</h1></a> -->
+      </section>
+    </header>
+    <section class="feed">
+      <section id="buttons">
+        <a href="/writepost" class="btn btn-default"><span class="fa fa-user"></span> Write New Post</a>
+        <a href="/myposts" class="btn btn-default"><span class="fa fa-user"></span> My posts</a>
+        <a href="/logout" class="btn btn-default">Logout</a>
+      </section>
+      <h2>Feed</h2><br>
+
+      <% for(var i=0; i<favorites.length; i++) {%>
+        <section class="post">
+          <div id="one">
+
+            <h5><%= favorites[i].name %>:</h5>
+            <h5><%= favorites[i].title %></h5>
+            <h5><%= favorites[i].date %></h5>
+            <p><%= favorites[i].msg %></p>
+            <span class="good" style="color: <%= favorites[i].favorite %> "><%= favorites[i].good %></span>
+            <span class="hide"><i class="fa fa-trash" aria-hidden="true"></i></span><br><br><br><br>
+          </div>
+        </section>
+        <% } %>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

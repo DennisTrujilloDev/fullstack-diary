@@ -1,0 +1,27 @@
+#buttons{
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+
+body {
+  margin-top: 50px;
+  background-image: url(journal.jpg);
+}
+h1 {
+  font-size: 6rem;
+  color: black;
+}
+.feed {
+  text-align: center;
+  background-color: lightgray;
+  margin: auto;
+  width: 50%;
+}
+.hide, fa-trash{
+  font-size: 10rem;
+}
+h5{
+  margin: 0;
+}

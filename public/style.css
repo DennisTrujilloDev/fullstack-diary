@@ -1,0 +1,16 @@
+
+
+.secWelcome{
+  text-align: center;
+}
+body{
+  background-color: lightseagreen;
+}
+.row{
+  background-color: yellow;
+  padding: 10px;
+  width: fit-content;
+  margin: auto;
+}
+
+
